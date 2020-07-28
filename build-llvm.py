@@ -657,6 +657,8 @@ def base_cmake_defines(dirs):
         # Don't include example build targets to save on cmake cycles
         'LLVM_INCLUDE_EXAMPLES': 'OFF',
 
+        # Use the experimental new pass manager
+        'LLVM_USE_NEWPM': 'ON',
     }
     # yapf: enable
 
