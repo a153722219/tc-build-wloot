@@ -7,6 +7,8 @@ function msg() {
     echo -e "\e[1;32m$@\e[0m"
 }
 
+rm -rf installTmp
+
 # Build LLVM
 msg "Building LLVM..."
 ./build-llvm.py \
