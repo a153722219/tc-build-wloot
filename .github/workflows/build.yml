@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Install dependencies
-      run: bash apt install -y bc \
+      run: apt update && apt install -y bc \
                       binutils-dev \
                       bison \
                       build-essential \
