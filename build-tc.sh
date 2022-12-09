@@ -13,6 +13,7 @@ rm -rf installTmp
 msg "Building LLVM..."
 ./build-llvm.py \
 	--update \
+	--branch "main" \
 	--build-stage1-only \
 	--install-stage1-only \
 	--projects "clang;lld;polly" \
