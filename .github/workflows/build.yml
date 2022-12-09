@@ -9,27 +9,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Install dependencies
-      run: sudo apt update && apt install -y bc \
-                      binutils-dev \
-                      bison \
-                      build-essential \
-                      ca-certificates \
-                      ccache \
-                      clang \
-                      cmake \
-                      curl \
-                      file \
-                      flex \
-                      git \
-                      libelf-dev \
-                      libssl-dev \
-                      lld \
-                      make \
-                      ninja-build \
-                      python3-dev \
-                      texinfo \
-                      u-boot-tools \
-                      xz-utils \
-                      zlib1g-dev
+      run: bash ci.sh deps
     - name: Build llvm
       run: bash build-tc.sh
